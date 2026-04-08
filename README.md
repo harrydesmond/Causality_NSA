@@ -28,9 +28,24 @@ Python packages:
 	<li><code>torch</code></li>
 	<li><code>mpi4py</code></li>
 	<li><code>causaldag</code></li>
-	<li><code>pytetrad</code></li>
+	<li><code>pytetrad</code> (see version pinning note below)</li>
 	<li><code>JPype1</code> (required by py-tetrad bridge)</li>
 </ul>
+
+### py-tetrad version pinning
+
+The results in this paper (in particular the PAG of Fig. 4) were produced with
+<code>py-tetrad</code> at commit
+<a href="https://github.com/cmu-phil/py-tetrad/commit/097783348ce46d97efeb4c2e4ad8ae506c95806d"><code>0977833</code></a>
+(March 9, 2026). Later versions ship a newer <code>tetrad-current.jar</code>
+whose refactored BOSS/PermutationSearch and CPDAG-transformation logic can
+produce a different PAG from the same data and hyperparameters.
+
+To install the pinned version:
+
+<pre>
+pip install git+https://github.com/cmu-phil/py-tetrad@0977833
+</pre>
 
 System/runtime requirements:
 <ul>
